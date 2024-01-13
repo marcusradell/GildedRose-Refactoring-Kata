@@ -32,7 +32,8 @@ impl GildedRose {
 
     pub fn update_quality(&mut self) {
         for i in 0..self.items.len() {
-            if self.items[i].name != "Aged Brie" && self.items[i].name != "Backstage passes to a TAFKAL80ETC concert"
+            if self.items[i].name != "Aged Brie"
+                && self.items[i].name != "Backstage passes to a TAFKAL80ETC concert"
             {
                 if self.items[i].quality > 0 {
                     if self.items[i].name != "Sulfuras, Hand of Ragnaros" {
@@ -94,6 +95,6 @@ mod tests {
         let mut rose = GildedRose::new(items);
         rose.update_quality();
 
-        assert_eq!("fixme", rose.items[0].name);
+        assert_eq!("foo", rose.items[0].name);
     }
 }
